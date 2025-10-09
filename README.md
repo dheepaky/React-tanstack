@@ -51,7 +51,7 @@ npm install
 
 # .env file
 PORT=5000
-MONGODB_URI=your_mongodb_uri```
+MONGODB_URI=your_mongodb_uri'''
 
 ---
 
