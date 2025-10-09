@@ -53,17 +53,9 @@ npm install
 PORT=5000
 MONGODB_URI=your_mongodb_uri
 
-# .env file for frontend
-
-VITE_BACKEND_URL=your_backend_url
-
----
-
 ## 👤 Author
 
 **Dheepak Y**
 
-* **GitHub:** [dheepaky](https://github.com/dheepaky)
-  
-* **Portfolio:** [dheepaky-portfolio](https://dheepaky-portfolio.vercel.app/)
-
+- **GitHub:** [dheepaky](https://github.com/dheepaky)
+- **Portfolio:** [dheepaky-portfolio](https://dheepaky-portfolio.vercel.app/)
