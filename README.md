@@ -58,7 +58,7 @@ MONGODB_URI=your_mongodb_uri
 
 VITE_BACKEND_URL=your_backend_url
 
-
+---
 
 ## 👤 Author
 
