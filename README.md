@@ -67,6 +67,3 @@ VITE_BACKEND_URL=your_backend_url
 * **GitHub:** [dheepaky](https://github.com/dheepaky)
   
 * **Portfolio:** [dheepaky-portfolio](https://dheepaky-portfolio.vercel.app/)
-
-
-npm start
