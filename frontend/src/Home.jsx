@@ -4,7 +4,9 @@ import { MdDelete, MdCancelPresentation } from "react-icons/md";
 import { FaEdit } from "react-icons/fa";
 import { useState } from "react";
 import backendUrl from "./Const";
-
+import { FaUser } from "react-icons/fa";
+import { FaRegUserCircle } from "react-icons/fa";
+import { MdOutlineDescription } from "react-icons/md";
 export default function Home() {
   const [editId, setEditId] = useState(null);
   const [editData, setEditData] = useState({ name: "", description: "" });
@@ -78,39 +80,47 @@ export default function Home() {
 
   return (
     <div className="page home-page">
-      <div>
-        <h1 className="text-center text-blue-700 text-3xl mt-5">User Data</h1>
+      <div className="flex justify-center mt-5">
+        <h1 className="flex items-center gap-3 text-blue-700 text-3xl font-semibold">
+          <FaUser className="text-4xl" />
+          Users Details
+        </h1>
       </div>
 
-      <div className="flex flex-col justify-center gap-5 mt-10 text-xl items-center ">
+      <div className="flex flex-col justify-center  mt-10 text-xl items-center ">
         {data.length === 0 && <p>No Data available Here</p>}
         {data.map((userdata) => {
           return (
             <div key={userdata._id} className="flex gap-5 items-center">
               {editId === userdata._id ? (
                 // Edit mode
-                <div className="shadow-[1px_1px_9px_1px] rounded-xl shadow-green-300 border border-green-400 p-4 w-fit text-blue-900">
-                  <h1>ID : {userdata._id}</h1>
-                  <input
-                    type="text"
-                    value={editData.name}
-                    onChange={(e) =>
-                      setEditData({ ...editData, name: e.target.value })
-                    }
-                    className="border-2 border-black m-1 px-2"
-                  />
-                  <input
-                    type="text"
-                    value={editData.description}
-                    onChange={(e) =>
-                      setEditData({
-                        ...editData,
-                        description: e.target.value,
-                      })
-                    }
-                    className="border-2 border-black m-1 px-2"
-                  />
-                  <div className="flex gap-5 items-center ">
+                <div className=" items-center text-center shadow-[1px_1px_9px_1px] rounded-xl shadow-green-300 border border-green-400 p-4 w-fit text-blue-900">
+                  <div className="flex flex-col gap-4 bg-white p-6 rounded-xl shadow-md max-w-md w-full">
+                    <h1 className="text-lg font-semibold text-gray-800">
+                      ID: {userdata._id}
+                    </h1>
+
+                    <input
+                      type="text"
+                      value={editData.name}
+                      onChange={(e) =>
+                        setEditData({ ...editData, name: e.target.value })
+                      }
+                      className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                    />
+                    <input
+                      type="text"
+                      value={editData.description}
+                      onChange={(e) =>
+                        setEditData({
+                          ...editData,
+                          description: e.target.value,
+                        })
+                      }
+                      className="border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                    />
+                  </div>
+                  <div className="flex gap-5 items-center justify-center">
                     <button
                       onClick={() => handleUpdate(userdata._id)}
                       className="bg-blue-500 text-white px-2 py-1 mt-2 block cursor-pointer"
@@ -130,11 +140,34 @@ export default function Home() {
                     onClick={() => handleEditClick(userdata)}>
                     <FaEdit className="h-8 w-8" />
                   </p>
-                  <div className="shadow-[1px_1px_9px_1px] rounded-xl shadow-green-300 border border-green-400 p-4 w-fit text-blue-900">
-                    <h1>id : {userdata._id}</h1>
-                    <h1>Name : {userdata.name}</h1>
-                    <h2>Description : {userdata.description}</h2>
+                  <div className="">
+                    <div className="mt-7 mb-3 w-xs bg-white/30 text-blue-900 backdrop-blur-md border border-green-200 shadow-green-300 rounded-2xl p-6 shadow-[1px_1px_9px_2px] transition-all hover:scale-[1.02] duration-300">
+                      <div className="space-y-2 overflow-auto mt-2">
+                        <h1 className="text-lg font-semibold text-gray-800">
+                          ID: {userdata._id}
+                        </h1>
+                        <p>
+                          <span className="justify-center flex items-center gap-2 font-semibold text-orange-500">
+                            <FaRegUserCircle className="text-emerald-600" />
+                            Name
+                          </span>{" "}
+                          <div className="border border-gray-300 p-2 text-center">
+                            {userdata.name}
+                          </div>
+                        </p>
+                        <p>
+                          <span className="justify-center flex items-center gap-2 font-semibold text-orange-500">
+                            <MdOutlineDescription className="text-emerald-600" />
+                            Description
+                          </span>{" "}
+                          <div className="border border-gray-300 p-2 text-center">
+                            {userdata.description}
+                          </div>
+                        </p>
+                      </div>
+                    </div>
                   </div>
+
                   <div>
                     <p
                       className="text-red-600 cursor-pointer mt-2"
