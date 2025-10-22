@@ -5,7 +5,7 @@ A full-stack **MERN** application for managing user data with modern React tools
 ### 🚀 Live Demo
 
 - Frontend: [react-tanstack-crud.vercel.app](https://react-tanstack-crud.vercel.app)
-- Backend API: [react-tanstack-crud.onrender.com](https://react-tanstack-crud.onrender.com)
+- Backend API: [react-tanstackquery-crud.onrender.com](https://react-tanstackquery-crud.onrender.com)
 
 ---
 
