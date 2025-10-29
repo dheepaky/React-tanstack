@@ -91,11 +91,11 @@ export default function Home() {
         {data.length === 0 && <p>No Data available Here</p>}
         {data.map((userdata) => {
           return (
-            <div key={userdata._id} className="flex gap-5 items-center">
+            <div key={userdata._id} className="flex gap-2 items-center">
               {editId === userdata._id ? (
                 // Edit mode
-                <div className=" items-center text-center shadow-[1px_1px_9px_1px] rounded-xl shadow-green-300 border border-green-400 p-4 w-fit text-blue-900">
-                  <div className="flex flex-col gap-4 bg-white p-6 rounded-xl shadow-md max-w-md w-full">
+                <div className=" items-center text-center shadow-[1px_1px_9px_1px]  rounded-xl shadow-green-300 border border-green-400 p-4 w-fit text-blue-900">
+                  <div className="flex flex-col gap-4 bg-white p-6 rounded-xl  shadow-md max-w-md w-full">
                     <h1 className="text-lg font-semibold text-gray-800">
                       ID: {userdata._id}
                     </h1>
@@ -128,7 +128,7 @@ export default function Home() {
                       {updateMutation.isPending ? "Saving..." : "Save"}
                     </button>
                     <button onClick={handleCancelClick}>
-                      <MdCancelPresentation className="h-10 mt-2 w-10 text-red-600 cursor-pointer" />
+                      <MdCancelPresentation className="h-10  w-10 mt-2  text-red-600 cursor-pointer" />
                     </button>
                   </div>
                 </div>
@@ -138,12 +138,12 @@ export default function Home() {
                   <p
                     className="text-blue-500 cursor-pointer"
                     onClick={() => handleEditClick(userdata)}>
-                    <FaEdit className="h-8 w-8" />
+                    <FaEdit className="md:h-8 h-6 md:w-8 w-6" />
                   </p>
                   <div className="">
-                    <div className="mt-7 mb-3 w-xs bg-white/30 text-blue-900 backdrop-blur-md border border-green-200 shadow-green-300 rounded-2xl p-6 shadow-[1px_1px_9px_2px] transition-all hover:scale-[1.02] duration-300">
+                    <div className="mt-7 mb-3 w-[310px] bg-white/30 text-blue-900 backdrop-blur-md border border-green-200 shadow-green-300 rounded-2xl p-6 shadow-[1px_1px_9px_2px] transition-all hover:scale-[1.02] duration-300">
                       <div className="space-y-2 overflow-auto mt-2">
-                        <h1 className="text-lg font-semibold text-gray-800">
+                        <h1 className="md:text-lg text-[16px] font-semibold text-gray-800">
                           ID: {userdata._id}
                         </h1>
                         <p>
@@ -172,7 +172,7 @@ export default function Home() {
                     <p
                       className="text-red-600 cursor-pointer mt-2"
                       onClick={() => handleDelete(userdata._id)}>
-                      <MdDelete className="h-8 w-8" />
+                      <MdDelete className="md:h-8 h-6 md:w-8 w-6" />
                     </p>
                   </div>
                 </>

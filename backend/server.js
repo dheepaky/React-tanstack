@@ -8,7 +8,8 @@ dotenv.config();
 const app = express();
 app.use(
   cors({
-    origin: ["https://react-tanstack-crud.vercel.app"],
+    // origin: ["https://react-tanstack-crud.vercel.app"],
+    origin: ["http://localhost:5173"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization", "Cookie"],
