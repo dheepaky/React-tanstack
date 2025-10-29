@@ -1,0 +1,4 @@
+
+PORT=Yourserverport
+MONGO_URL=mongodburl
+
