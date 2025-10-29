@@ -1,6 +1,8 @@
-# 🌐 React + TanStack CRUD Application  
+# ⚛️  React + TanStack CRUD Application  
 
 > A modern, high-performance CRUD app built with **React** and **TanStack Query** for fast, reactive, and optimized data fetching.
+
+
 
 🎯 **Live Demo:** [https://react-tanstack-crud.vercel.app/](https://react-tanstack-crud.vercel.app/) 
 
